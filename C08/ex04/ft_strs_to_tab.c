@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 14:39:30 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/21 12:17:14 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/21 12:29:12 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,13 +56,13 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	tab = malloc(sizeof(t_stock_str) * (ac + 1));
 	if (!tab)
 		return (NULL);
-	while (av[i])
+	while (i < ac)
 	{
 		tab[i].size = ft_lenstr(av[i]);
 		tab[i].str = av[i];
-		tab[i].copy = ft_str_copy(tab[i].str);
+		tab[i].copy = ft_str_copy(av[i]);
 		i++;
 	}
-	tab[i].str = '\0';
+	tab[i].str = 0;
 	return (tab);
 }

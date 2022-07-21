@@ -6,11 +6,18 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 16:40:19 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/21 12:21:15 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/21 12:32:11 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+typedef struct s_stock_str
+{
+	int		size;
+	char	*str;
+	char	*copy;
+}	t_stock_str;
 
 void	ft_putchar(char c)
 {
