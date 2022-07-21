@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 12:10:48 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/21 12:28:29 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/21 15:36:12 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef int	t_bool;
 # define FALSE 0
 # define SUCCESS 0
 
-t_bool	ft_is_even(int nbr);
-void	ft_putstr(char *str);
+// t_bool	ft_is_even(int nbr);
+// void	ft_putstr(char *str);
 
 #endif
