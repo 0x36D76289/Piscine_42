@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_show_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cfrancie <cfrancie@student.42.fr >         +#+  +:+       +#+        */
+/*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 16:40:19 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/19 16:57:30 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/21 12:21:15 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	ft_show_tab(struct s_stock_str *par)
 	int	i;
 
 	i = 0;
-	while (par[i])
+	while (par[i].str)
 	{
 		ft_putstr(par[i].str);
 		ft_putchar('\n');
