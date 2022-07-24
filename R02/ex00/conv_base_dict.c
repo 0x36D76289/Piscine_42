@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 15:49:19 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/24 19:07:59 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/24 21:28:37 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void	ft_fill_file(char **res, int fd)
 	}
 }
 
-char	**conv_base_dict(void)
+char	**ft_conv_base_dict(void)
 {
 	char	**res;
 	int		fd;

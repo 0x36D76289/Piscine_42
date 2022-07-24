@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 13:41:37 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/24 21:22:04 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/24 21:29:42 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@
 
 // main.c
 int		ft_atoi(char *str);
-char	*read_input(void);
+char	*ft_read_input(void);
 
 // error.c
 void	ft_putargc_error(void);
@@ -48,22 +48,19 @@ char	*ft_split(char *tab);
 
 // arg_check.c
 int		ft_file_size(char *str);
-int		check_arg(char *arg);
-
-// put_all_dep
-int		ft_more(char *str, int i);
-int		ft_put_cen(char *str, char **tab, int i, int len);
+int		ft_check_arg(char *arg);
 
 // put_all
-void	ft_print(char *str, char **tab);
-void	ft_putstr(char *str);
 void	ft_putchar(char c);
+void	ft_putstr(char *str);
+void	ft_putstr_res(char *str, char **tab, int i, int size);
+void	ft_print(char *str, char **tab);
 
-// convert_base
+// convert_base_dict
 int		ft_count_lines(int fd);
 char	*ft_convert_num(char *num, int index);
 void	ft_malloc_res(char **tab, int fd);
 void	ft_fill_file(char **res, int fd);
-char	**conv_base_dict(void);
+char	**ft_conv_base_dict(void);
 
 #endif

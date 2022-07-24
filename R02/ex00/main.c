@@ -30,18 +30,6 @@ int	ft_atoi(char *str)
 	return (0);
 }
 
-char	*read_input(void)
-{
-	int		ret;
-	char	*buffer;
-
-	buffer = malloc(sizeof(char *) * 500);
-	if (!buffer)
-		return (NULL);
-	ret = read(0, buffer, 500);
-	return (buffer);
-}
-
 int	main(int argc, char **argv)
 {
 	char	**tab;
@@ -57,7 +45,7 @@ int	main(int argc, char **argv)
 		ft_putargc_error();
 		return (1);
 	}
-	tab = conv_base_dict();
+	tab = ft_conv_base_dict();
 	ft_print(argv[1], tab);
 	i = 0;
 	while (tab[i])

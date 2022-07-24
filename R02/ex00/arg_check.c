@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 14:04:22 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/24 18:55:29 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/24 21:27:44 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_file_size(char *str)
 	return (res);
 }
 
-int	check_arg(char *arg)
+int	ft_check_arg(char *arg)
 {
 	int	tmp;
 	int	i;
