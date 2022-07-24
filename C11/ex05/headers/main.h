@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 17:06:53 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/23 19:47:04 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:31:27 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ int		modulo(int a, int b);
 int		diviser(int a, int b);
 int		ft_do_op(int val1, int operator, int val2);
 void	ft_putchar(char c);
+void	ft_putstr(char *str);
+void	ft_putnum(int num);
+void	ft_putnum(int num);
 void	ft_putstr(char *str);
 void	ft_putnum(int num);
 

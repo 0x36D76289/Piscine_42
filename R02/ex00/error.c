@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operation.c                                        :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 19:20:14 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/23 19:22:20 by cfrancie         ###   ########.fr       */
+/*   Created: 2022/07/24 13:46:36 by cfrancie          #+#    #+#             */
+/*   Updated: 2022/07/24 20:05:26 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	multiple(int a, int b)
+#include "./headers/header.h"
+
+void	ft_putargc_error(void)
 {
-	return (a * b);
+	write(1, "Error\n", 7);
 }
 
-int	plus(int a, int b)
+void	ft_putdict_error(void)
 {
-	return (a + b);
-}
-
-int	moins(int a, int b)
-{
-	return (a - b);
-}
-
-int	modulo(int a, int b)
-{
-	return (a % b);
-}
-
-int	diviser(int a, int b)
-{
-	return (a / b);
+	write(1, "Dict Error\n", 12);
 }

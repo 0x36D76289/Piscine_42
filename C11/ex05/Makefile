@@ -1,22 +1,22 @@
-CC		= gcc
-CFLAGS	= -Werror -Wextra -Wall
-SRCS	= main.c do_op.c operation.c print.c 
-OBJS	= ${SRCS:.c=.o}
-NAME	= do-op
-HEADERS = *.h
+CC			= gcc
+CFLAGS		= -Wall -Wextra -Werror
+HEADERS		= ./headers
+SRC			= main.c res_print.c print.c
+OBJ			= ${SRC:.c=.o}
+TARGET		= do-op
 
 .c.o:
-	${CC} ${CFLAGS} -g -I ${HEADERS}-c $< -o ${<:.c=.o}
+	${CC} ${CFLAGS} -g -I ${HEADERS} -c $< -o ${<:.c=.o}
 
-${NAME}:	${OBJS}
-	gcc ${CFLAGS} -g -I ${HEADERS} ${OBJS} -o ${NAME}
+$(TARGET): $(OBJ)
+	${CC} ${CFLAGS} -g -I ${HEADERS} ${OBJ} -o ${TARGET}
 
-all:	${NAME}
+all:		$(TARGET)
 
 clean:
-	rm -f ${OBJS}
+	rm -f ${OBJ}
 
 fclean: clean
-	rm -f ${NAME}
+	rm -f ${TARGET}
 
 re: fclean all

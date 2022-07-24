@@ -6,19 +6,17 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 16:21:05 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/23 19:48:27 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/24 17:55:36 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.h"
+#include "./headers/main.h"
 
 int	ft_atoi(char *str)
 {
 	long	ret;
 	int		sign;
-	int		count;
 
-	count = 0;
 	sign = 1;
 	ret = 0;
 	while (*str == ' ' || *str == '\t' || *str == '\n'
@@ -33,11 +31,8 @@ int	ft_atoi(char *str)
 	while (*str >= '0' && *str <= '9')
 	{
 		ret = ret * 10 + (long)(*str - '0');
-		count++;
 		str++;
 	}
-	if (count == 0)
-		return (FALSE);
 	return ((int)(ret * sign));
 }
 
@@ -108,6 +103,7 @@ int	main(int argc, char *argv[])
 			ft_putnum(ft_do_op(val1, operator, val2));
 			ft_putchar('\n');
 		}
+		return (0);
 	}
-	return (0);
+	return (-1);
 }

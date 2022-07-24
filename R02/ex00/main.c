@@ -1,51 +1,69 @@
-//
-// Created by cel on 24/07/22.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/24 13:41:28 by cfrancie          #+#    #+#             */
+/*   Updated: 2022/07/24 20:41:59 by cfrancie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "main.h"
+#include "./headers/header.h"
 
-int main(int argc, char **argv)
+int	ft_atoi(char *str)
 {
-    if (argc == 2)
-    {
-        if (verif_file(DEFAULT_PATH) == 0)
-        {
-            ft_putstr("File not found\n");
-            return (0);
-        }
-        else
-        {
-            t_list *list;
-            char **res;
+	int	i;
 
-            list = take_value(DEFAULT_PATH);
-            res = ft_putnum_convert(list, argv[1]);
-            ft_putstrstr(res);
-            return (0);
-        }
-    }
-    if (argc == 3)
-    {
-        if (verif_file(argv[2]) == 0)
-        {
-            ft_putstr("File not found\n");
-            return (0);
-        }
-        else
-        {
-            t_list *list;
-            char **res;
+	i = 0;
+	while (str[i] == ' ')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
+		i++;
+	while (str[i])
+	{
+		if (i != ' ')
+			return (1);
+		i++;
+	}
+	return (0);
+}
 
-            list = take_value(argv[2]);
-            res = ft_putnum_convert(list, argv[1]);
-            ft_putstrstr(res);
-            return (0);
-        }
-    }
-    else
-    {
-        ft_putstr("Error: invalid number of arguments\n");
-        return (0);
-    }
-    return (0);
+char	*read_input(void)
+{
+	int		ret;
+	char	*buffer;
+
+	buffer = malloc(sizeof(char *) * 500);
+	if (!buffer)
+		return (NULL);
+	ret = read(0, buffer, 500);
+	return (buffer);
+}
+
+int	main(int argc, char **argv)
+{
+	char	**tab;
+	int		i;
+
+	if (argc < 2 || argc > 3)
+	{
+		ft_putargc_error();
+		return (1);
+	}
+	if (!check_arg(argv[1]))
+	{
+		ft_putargc_error();
+		return (1);
+	}
+	tab = conv_base_dict();
+	ft_print(argv[1], tab);
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+	return (0);
 }
