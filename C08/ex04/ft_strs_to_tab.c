@@ -6,22 +6,14 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 14:39:30 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/21 16:10:43 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/23 22:35:50 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-typedef struct s_stock_str
-{
-	int		size;
-	char	*str;
-	char	*copy;
-}	t_stock_str;
 
 int	ft_lenstr(char	*str)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (str[i])
@@ -31,38 +23,18 @@ int	ft_lenstr(char	*str)
 
 char	*ft_str_copy(char *str)
 {
+	char	*copy;
 	int		i;
-	char	*res;
 
-	res = malloc(sizeof(char) * (ft_lenstr(str) + 1));
 	i = 0;
-	if (!res)
+	copy = malloc(sizeof(char) * (ft_lenstr(str) + 1));
+	if (!copy)
 		return (NULL);
 	while (str[i])
 	{
-		res[i] = str[i];
+		copy[i] = str[i];
 		i++;
 	}
-	res[i] = '\0';
-	return (res);
-}
-
-struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
-{
-	int					i;
-	struct s_stock_str	*tab;
-
-	i = 0;
-	tab = malloc(sizeof(t_stock_str) * (ac + 1));
-	if (!tab)
-		return (NULL);
-	while (i < ac)
-	{
-		tab[i].size = ft_lenstr(av[i]);
-		tab[i].str = av[i];
-		tab[i].copy = ft_str_copy(av[i]);
-		i++;
-	}
-	tab[i].str = 0;
-	return (tab);
+	copy[i] = '\0';
+	return (copy);
 }

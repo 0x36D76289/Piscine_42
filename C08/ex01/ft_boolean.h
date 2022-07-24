@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 12:10:48 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/21 15:36:12 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/23 22:35:42 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_BOOLEAN_H
 
 # include <unistd.h>
+# include <stdlib.h>
 
 typedef int	t_bool;
 
@@ -23,8 +24,5 @@ typedef int	t_bool;
 # define TRUE 1
 # define FALSE 0
 # define SUCCESS 0
-
-// t_bool	ft_is_even(int nbr);
-// void	ft_putstr(char *str);
 
 #endif

@@ -1,22 +1,19 @@
-CC		= cc
-CFLAGS	= -Werror -Wextra -Wall
-SRCS	= srcs/
-OBJS	= ${SRCS:.c=.o}
-NAME	= rush-02.a
-HEADERS = includes/
+CC			= cc
+CFLAGS		= -Wall -Wextra -Werror
+HEADERS		= main.h
+SRC			= main.c word.c execute.c printable.c put.c
+OBJ			= ${SRC:.c=.o}
+TARGET		= ex00
 
-.c.o:
-	${CC} ${CFLAGS} -I ${HEADERS} -c $< -o ${<:.c=.o}
+$(TARGET): $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(TARGET) $(HEADERS) -L
 
-${NAME}:	${OBJS}
-	ar -rc ${NAME} ${OBJS}
-
-all:	${NAME}
+all:		$(TARGET)
 
 clean:
-	rm -f ${OBJS}
+	rm -f $(TARGET) $(OBJ)
 
-fclean:	clean
-	rm -f ${NAME}
+fclean: clean
+	rm -f $(TARGET) $(OBJ)
 
-re:	fclean all
+re: fclean all

@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "ft_boolean.h": "c"
+        "ft_boolean.h": "c",
+        "stdlib.h": "c",
+        "unistd.h": "c",
+        "main.h": "c"
     }
 }

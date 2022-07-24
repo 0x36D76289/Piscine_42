@@ -1,229 +1,231 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target 'all'.  Stop.
 
-# GNU Make 4.2.1
+# GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
-# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul 23 20:00:14 2022
+# Make data base, printed on Sun Jul 24 11:48:45 2022
 
 # Variables
 
-# automatic
-<D = $(patsubst %/,%,$(dir $<))
-# automatic
-?F = $(notdir $?)
 # environment
-DESKTOP_SESSION = ubuntu
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# environment
+GTK_RC_FILES = /etc/gtk/gtkrc:/home/cel/.gtkrc:/home/cel/.config/gtkrc
+# environment
+LC_NAME = fr_FR.UTF-8
+# environment
+LC_NUMERIC = fr_FR.UTF-8
+# environment
+VSCODE_CWD = /home/cel
+# environment
+LC_ADDRESS = fr_FR.UTF-8
 # default
-.SHELLFLAGS := -c
-# environment
-XDG_SESSION_CLASS = user
-# environment
-XDG_SESSION_TYPE = x11
-# environment
-VSCODE_LOG_NATIVE = false
-# automatic
-?D = $(patsubst %/,%,$(dir $?))
+MAKE_COMMAND := make
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-XAUTHORITY = /mnt/nfs/homes/cfrancie/.Xauthority
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
 # environment
-GDMSESSION = ubuntu
+PWD = /home/cel/Bureau/Piscine_42
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
 # environment
-XMODIFIERS = @im=ibus
+MAIL = /var/spool/mail/cel
+# environment
+XDG_DATA_DIRS = /home/cel/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+# environment
+OLDPWD = /home/cel
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/cel/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
+# environment
+LANG = C
+# environment
+XAUTHORITY = /home/cel/.Xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # makefile
-CURDIR := /mnt/nfs/homes/cfrancie/Desktop/PISCINE
+MAKEFLAGS = pqrR
 # makefile
-SHELL = /bin/sh
+CURDIR := /home/cel/Bureau/Piscine_42
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
 # environment
-_ = /usr/share/code/code
+PAM_KWALLET5_LOGIN = /run/user/1000/kwallet5.socket
 # environment
-JOURNAL_STREAM = 9:119209
+MFLAGS = -pqrR
+# default
+.SHELLFLAGS := -c
 # environment
-XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+XDG_CONFIG_DIRS = /home/cel/.config/kdedefaults:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XCURSOR_THEME = Adwaita
+# environment
+XDG_SESSION_DESKTOP = KDE
 # makefile
 MAKEFILE_LIST := 
 # automatic
 @F = $(notdir $@)
 # environment
-GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
-# 'override' directive
-GNUMAKEFLAGS := 
+VSCODE_PID = 6753
 # environment
-MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
 # environment
-XDG_DATA_DIRS = /usr/share/gnome:/usr/share/ubuntu:/mnt/nfs/homes/cfrancie/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+SESSION_MANAGER = local/arch:@/tmp/.ICE-unix/729,unix/arch:/tmp/.ICE-unix/729
+# automatic
+*F = $(notdir $*)
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/102629/bus
+CHROME_DESKTOP = code-url-handler.desktop
 # environment
-VSCODE_VERBOSE_LOGGING = true
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
 # environment
-MANAGERPID = 23056
-# environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/102629/vscode-ipc-21fca95f-f7f4-4dac-b55b-b31e3a543eaa.sock
-# environment
-VSCODE_CWD = /mnt/nfs/homes/cfrancie
-# environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
-# environment
-KRB5CCNAME = FILE:/tmp/krb5cc_102629_apUOY1
+VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"8e1a08857df44efaeace20a1f4372f40.fr","_translationsConfigFile":"/home/cel/.config/Code/clp/8e1a08857df44efaeace20a1f4372f40.fr/tcf.json","_cacheRoot":"/home/cel/.config/Code/clp/8e1a08857df44efaeace20a1f4372f40.fr","_resolvedLanguagePackCoreLocation":"/home/cel/.config/Code/clp/8e1a08857df44efaeace20a1f4372f40.fr/3b889b090b5ad5793f524b5d1d39fda662b96a2a","_corruptedFile":"/home/cel/.config/Code/clp/8e1a08857df44efaeace20a1f4372f40.fr/corrupted.info","_languagePackSupport":true}
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
-# environment
-PATH = /mnt/nfs/homes/cfrancie/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-# environment
-GPG_AGENT_INFO = /run/user/102629/gnupg/S.gpg-agent:0:1
-# environment
-LSCOLORS = Gxfxcxdxbxegedabagacad
-# environment
-SESSION_MANAGER = local/e2r5p9.clusters.42paris.fr:@/tmp/.ICE-unix/23564,unix/e2r5p9.clusters.42paris.fr:/tmp/.ICE-unix/23564
-# environment
-XDG_RUNTIME_DIR = /run/user/102629
-# environment
-XDG_MENU_PREFIX = gnome-
-# environment
-VSCODE_LOG_STACK = false
-# environment
-ELECTRON_RUN_AS_NODE = 1
-# environment
-INVOCATION_ID = 9582decf91184110a6c38d29ccf2fbfb
+# makefile
+SHELL = /bin/sh
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+MAKECMDGOALS := all
 # environment
-XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/cfrancie
-# environment
-LS_COLORS = 
-# environment
-XDG_SESSION_DESKTOP = ubuntu
-# environment
-SSH_AUTH_SOCK = /run/user/102629/keyring/ssh
-# environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 25387
-# automatic
-%F = $(notdir $%)
-# environment
-DISPLAY = :0
-# environment
-VSCODE_PIPE_LOGGING = true
-# environment
-PWD = /mnt/nfs/homes/cfrancie/Desktop/PISCINE
-# default
-.LOADED := 
-# environment
-SSH_AGENT_PID = 23528
-# environment
-ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
-# environment
-GTK_MODULES = gail:atk-bridge
-# environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
-# environment
-HOME = /mnt/nfs/homes/cfrancie
-# environment
-VSCODE_CODE_CACHE_PATH = /mnt/nfs/homes/cfrancie/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
-# environment
-LOGNAME = cfrancie
-# environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
-# environment
-ZSH = /mnt/nfs/homes/cfrancie/.oh-my-zsh
-# environment
-VSCODE_HANDLES_UNCAUGHT_ERRORS = true
-# environment
-GNOME_DESKTOP_SESSION_ID = this-is-deprecated
-# automatic
-^D = $(patsubst %/,%,$(dir $^))
+SHLVL = 1
 # environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 # default
-MAKECMDGOALS := all
+MAKEFILES := 
 # environment
-QT_IM_MODULE = ibus
+LANGUAGE = 
 # environment
-SHLVL = 1
+LC_MONETARY = fr_FR.UTF-8
 # environment
-IM_CONFIG_PHASE = 1
-# default
-MAKE_VERSION := 4.2.1
-# environment
-USER = cfrancie
-# makefile
-.DEFAULT_GOAL := 
-# environment
-XDG_CURRENT_DESKTOP = Unity
-# environment
-LIBVIRT_DEFAULT_URI = qemu:///system
-# environment
-LESS = -R
+MOTD_SHOWN = pam
 # automatic
-%D = $(patsubst %/,%,$(dir $%))
-# default
-MAKE_COMMAND := make
+^F = $(notdir $^)
 # environment
-OLDPWD = /mnt/nfs/homes/cfrancie
-# default
-.VARIABLES := 
+LC_TIME = fr_FR.UTF-8
+# environment
+INVOCATION_ID = 03688feac00243f3a2756e33c704c82b
+# environment
+LC_TELEPHONE = fr_FR.UTF-8
 # automatic
-*F = $(notdir $*)
+?F = $(notdir $?)
 # environment
-XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+KDE_APPLICATIONS_AS_SCOPE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/102629/vscode-d93572be-1.68.1-main.sock
-# makefile
-MAKEFLAGS = pqrR
+XDG_SEAT = seat0
 # environment
-MFLAGS = -pqrR
-# automatic
-*D = $(patsubst %/,%,$(dir $*))
-# automatic
-+D = $(patsubst %/,%,$(dir $+))
-# environment
-GDK_BACKEND = x11
+XDG_CURRENT_DESKTOP = KDE
 # automatic
 +F = $(notdir $+)
 # environment
-QT_ACCESSIBILITY = 1
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
-DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
+DESKTOP_SESSION = plasma
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = KDE
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+BROWSER = firefox
+# environment
+LOGNAME = cel
+# environment
+XDG_VTNR = 1
+# makefile
+.DEFAULT_GOAL := 
+# environment
+SYSTEMD_EXEC_PID = 6682
+# environment
+EDITOR = nano
+# environment
+DISPLAY = :0
+# environment
+GTK_MODULES = canberra-gtk-module
+# environment
+USER = cel
 # default
-MAKEFILES := 
+MAKE_VERSION := 4.3
+# environment
+KDE_SESSION_UID = 1000
+# environment
+MANAGERPID = 670
+# environment
+LC_MEASUREMENT = fr_FR.UTF-8
+# environment
+_ = /usr/bin/make
+# environment
+LC_PAPER = fr_FR.UTF-8
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+JOURNAL_STREAM = 8:58663
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+GTK2_RC_FILES = /etc/gtk-2.0/gtkrc:/home/cel/.gtkrc-2.0:/home/cel/.config/gtkrc-2.0
+# environment
+HOME = /home/cel
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-72baf1fb-1.69.2-main.sock
+# environment
+XDG_SESSION_ID = 2
+# environment
+XCURSOR_SIZE = 24
+# default
+.RECIPEPREFIX := 
 # automatic
 <F = $(notdir $<)
-# environment
-PAGER = less
-# environment
-LC_ALL = C
-# environment
-GJS_DEBUG_TOPICS = JS ERROR;JS LOG
-# automatic
-^F = $(notdir $^)
 # default
 SUFFIXES := 
 # environment
-CHROME_DESKTOP = code-url-handler.desktop
+QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+KDE_SESSION_VERSION = 5
 # default
-.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
 # environment
-GJS_DEBUG_OUTPUT = stderr
-# default
-.RECIPEPREFIX := 
+KDE_FULL_SESSION = true
 # environment
-LANG = C
-# environment
-DOCKER_HOST = unix:///run/user/102629/docker.sock
-# environment
-VSCODE_PID = 25387
+LC_IDENTIFICATION = fr_FR.UTF-8
 # variable set hash-table stats:
-# Load=105/1024=10%, Rehash=0, Collisions=7/127=6%
+# Load=106/1024=10%, Rehash=0, Collisions=4/133=3%
 
 # Pattern-specific Variable Values
 
@@ -231,9 +233,9 @@ VSCODE_PID = 25387
 
 # Directories
 
-# . (device 55, inode 284626824): 22 files, no impossibilities.
+# . (device 2050, inode 55182926): 21 files, no impossibilities.
 
-# 22 files, no impossibilities in 1 directories.
+# 21 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -242,21 +244,7 @@ VSCODE_PID = 25387
 # Files
 
 # Not a target:
-all:
-#  Command line target.
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has not been updated.
-
-# Not a target:
 Makefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
-
-# Not a target:
-makefile:
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
@@ -267,6 +255,20 @@ makefile:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
 
 # Not a target:
 GNUmakefile:
@@ -283,13 +285,13 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 30 / storage = 188 B / avg = 6 B
- 
-# current buf: size = 8162 B / used = 188 B / count = 30 / avg = 6 B
+# strcache buffers: 1 (0) / strings = 29 / storage = 184 B / avg = 6 B
+# current buf: size = 8162 B / used = 184 B / count = 29 / avg = 6 B
 
-# strcache performance: lookups = 33 / hit rate = 9%
+# strcache performance: lookups = 32 / hit rate = 9%
 # hash-table stats:
-# Load=30/8192=0%, Rehash=0, Collisions=1/33=3%
-# Finished Make data base on Sat Jul 23 20:00:14 2022
+# Load=29/8192=0%, Rehash=0, Collisions=0/32=0%
+ 
+# Finished Make data base on Sun Jul 24 11:48:45 2022
 
  
