@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.h                                             :+:      :+:    :+:   */
+/*   ft_list_push_back.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 17:06:53 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/25 16:57:59 by cfrancie         ###   ########.fr       */
+/*   Created: 2022/07/25 19:38:08 by cfrancie          #+#    #+#             */
+/*   Updated: 2022/07/25 20:00:53 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAIN_H
-# define MAIN_H
+#include "ft_list.h"
 
-# include <unistd.h>
-# include <stdbool.h>
+void	ft_list_push_back(t_list **begin_list, void *data)
+{
+	t_list	*res;
+	t_list	*tmp;
 
-int		add(int a, int b);
-int		multple(int a, int b);
-int		modulo(int a, int b);
-int		moins(int a, int b);
-int		division(int a, int b);
-int		ft_strcmp(char *str1, char *str2);
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-void	ft_putnum(int num);
-
-
-#endif
+	res = ft_create_elem(data);
+	if (!(*begin_list))
+		*begin_list = res;
+	else
+	{
+		while (tmp)
+		{
+			tmp = begin_list->next;
+			if (begin_list->next == NULL)
+			{
+				begin_list->next = res;
+				break ;
+			}
+		}
+	}
+}

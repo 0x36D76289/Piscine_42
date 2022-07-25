@@ -1,30 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.h                                             :+:      :+:    :+:   */
+/*   ft_advanced_sort_string_tab.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 17:06:53 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/25 16:57:59 by cfrancie         ###   ########.fr       */
+/*   Created: 2022/07/25 16:37:34 by cfrancie          #+#    #+#             */
+/*   Updated: 2022/07/25 16:40:35 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAIN_H
-# define MAIN_H
+int	ft_strlen(char **tab)
+{
+	int	i;
 
-# include <unistd.h>
-# include <stdbool.h>
+	i = 0;
+	while (tab[i])
+		i++;
+	return (i);
+}
 
-int		add(int a, int b);
-int		multple(int a, int b);
-int		modulo(int a, int b);
-int		moins(int a, int b);
-int		division(int a, int b);
-int		ft_strcmp(char *str1, char *str2);
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-void	ft_putnum(int num);
+void	ft_advanced_sort_string_tab(char **tab, int(*cmp)(char *, char *))
+{
+	int		i;
+	int		j;
+	char	*tmp;
 
-
-#endif
+	i = 0;
+	while (i < ft_strlen(tab))
+	{
+		j = 0;
+		while (j < ft_strlen(tab))
+		{
+			if (cmp(tab[i], tab[j]) < 0)
+			{
+				tmp = tab[i];
+				tab[i] = tab[j];
+				tab[j] = tmp;
+			}
+			j++;
+		}
+		i++;
+	}
+}

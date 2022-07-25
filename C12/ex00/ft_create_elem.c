@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.h                                             :+:      :+:    :+:   */
+/*   ft_create_elem.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 17:06:53 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/25 16:57:59 by cfrancie         ###   ########.fr       */
+/*   Created: 2022/07/25 17:39:54 by cfrancie          #+#    #+#             */
+/*   Updated: 2022/07/25 18:45:41 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAIN_H
-# define MAIN_H
+#include "ft_list.h"
 
-# include <unistd.h>
-# include <stdbool.h>
+t_list	*ft_create_elem(void *data)
+{
+	t_list	*res;
 
-int		add(int a, int b);
-int		multple(int a, int b);
-int		modulo(int a, int b);
-int		moins(int a, int b);
-int		division(int a, int b);
-int		ft_strcmp(char *str1, char *str2);
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-void	ft_putnum(int num);
-
-
-#endif
+	res = malloc(sizeof(t_list));
+	if (!res)
+		return (NULL);
+	res->data = data;
+	res->next = NULL;
+	return (res);
+}

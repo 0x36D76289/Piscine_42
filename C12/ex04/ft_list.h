@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.h                                             :+:      :+:    :+:   */
+/*   ft_list.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 17:06:53 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/25 16:57:59 by cfrancie         ###   ########.fr       */
+/*   Created: 2022/07/25 19:38:33 by cfrancie          #+#    #+#             */
+/*   Updated: 2022/07/25 19:48:46 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAIN_H
-# define MAIN_H
+#ifndef FT_LIST_H
+# define FT_LIST_H
 
-# include <unistd.h>
-# include <stdbool.h>
+# include <stdlib.h>
 
-int		add(int a, int b);
-int		multple(int a, int b);
-int		modulo(int a, int b);
-int		moins(int a, int b);
-int		division(int a, int b);
-int		ft_strcmp(char *str1, char *str2);
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-void	ft_putnum(int num);
+typedef struct s_list
+{
+	void	*data;
+	t_list	*next;
+}	t_list;
 
+int	ft_list_push_back(t_list *begin_list);
+t_list	*ft_create_elem(void *data);
 
 #endif
