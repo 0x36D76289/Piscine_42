@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 16:21:05 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/24 17:55:36 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/25 16:26:31 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,31 +36,9 @@ int	ft_atoi(char *str)
 	return ((int)(ret * sign));
 }
 
-char	search_and_rep(char *str)
-{
-	int		i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == '+')
-			return (1);
-		if (str[i] == '-')
-			return (2);
-		if (str[i] == '/')
-			return (3);
-		if (str[i] == '*')
-			return (4);
-		if (str[i] == '%')
-			return (5);
-		i++;
-	}
-	return (0);
-}
-
 int	condition(int val1, int operator, int val2)
 {
-	if (val1 == FALSE || val2 == FALSE)
+	if (val1 == false || val2 == false)
 	{
 		write(1, "0\n", 2);
 		return (1);
@@ -89,14 +67,15 @@ int	condition(int val1, int operator, int val2)
 
 int	main(int argc, char *argv[])
 {
-	int	operator;
-	int	val1;
-	int	val2;
+	void		(*fnc[5])(int, int);
 
+	fnc[0] = &add;
+	fnc[1] = &multple;
+	fnc[2] = &modulo;
+	fnc[3] = &moins;
+	fnc[4] = &division;
 	if (argc == 4)
 	{
-		val1 = ft_atoi(argv[3]);
-		val2 = ft_atoi(argv[1]);
 		operator = search_and_rep(argv[2]);
 		if (condition(val1, operator, val2) == 0)
 		{

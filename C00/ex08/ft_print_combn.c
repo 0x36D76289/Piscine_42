@@ -6,60 +6,71 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 17:41:06 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/21 14:29:35 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/25 13:58:23 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdbool.h>
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void	ft_putcombn(char *str)
+void	ft_put_res(int n, int *res)
 {
-	int	i;
+	int		i;
+	bool	tmp;
 
-	i = 0;
-	while (str[i])
+	i = 1;
+	tmp = 1;
+	while (i < n)
 	{
-		ft_putchar(str[i]);
+		if (res[i] <= res[i - 1])
+			tmp = 0;
 		i++;
 	}
-}
-
-int	ft_lenstr(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-void	ft_print_combn_rec(char	*str, int i)
-{
-	int	size;
-
-	size = ft_lenstr(str);
-	if (str[i])
+	if (tmp)
 	{
-
+		i = 0;
+		while (i < n)
+		{
+			ft_putchar(res[i] + '0');
+			i++;
+		}
+		if (res[0] < (10 - n))
+		{
+			ft_putchar(' ');
+			ft_putchar(',');
+		}
 	}
 }
 
 void	ft_print_combn(int n)
 {
-	char	*res;
-	int		i;
-	
+	int	res[12];
+	int	i;
+
 	i = 0;
 	while (i < n)
 	{
-		res[i] = i;
+		res[i] = 0;
 		i++;
 	}
-	
+	while (res[0] <= (10 - n) && n >= 1 && n < 10)
+	{
+		ft_put_res(n, res);
+		res[n - 1]++;
+		i = n - 1;
+		while (i && n > 1)
+		{
+			if (res[i] > 9)
+			{
+				res[i - 1]++;
+				res[i] = 0;
+			}
+			i--;
+		}
+	}
 }
