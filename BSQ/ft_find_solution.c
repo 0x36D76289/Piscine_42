@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 00:10:57 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/26 17:20:19 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/26 23:51:10 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_min(int a, int b, int c)
 {
-	if (a <= b && a <= c) 
-		return a;
+	if (a <= b && a <= c)
+		return (a);
 	else if (b <= a && b <= c)
-		return b;
-	return c;
+		return (b);
+	return (c);
 }
 
 int	**ft_generate_map(int line, int colone)
@@ -73,11 +73,11 @@ int	ft_biggest_square(char **map, int colone, int line, char o)
 
 int	ft_find_position_square(char **map, int colone, int line, char o)
 {
-	int i;
-	int j;
-	int **map2;
-	int count_max;
-	int p;
+	int	i;
+	int	j;
+	int	**map2;
+	int	count_max;
+	int	p;
 
 	i = 0;
 	p = 0;
