@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 16:21:05 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/26 15:50:23 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/26 19:36:29 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,21 @@ int	ft_find_ope(char *arg)
 	return (-1);
 }
 
+void	ft_res(int (*listefonctions[5])(int, int), int val1, int val2, int op)
+{
+	if (op == -1)
+		ft_putchar('0');
+	else if (listefonctions[op] == &division && val2 == 0)
+		ft_putstr("Stop : division by zero\n");
+	else if ((listefonctions[op] == &modulo && val2 == 0))
+		ft_putstr("Stop : modulo by zero\n");
+	else
+	{
+		ft_putnum(listefonctions[op](val1, val2));
+		ft_putchar('\n');
+	}
+}
+
 int	main(int argc, char *argv[])
 {
 	int	(*listefonctions[5])(int, int);
@@ -75,13 +90,6 @@ int	main(int argc, char *argv[])
 	val1 = ft_atoi(argv[1]);
 	val2 = ft_atoi(argv[3]);
 	op = ft_find_ope(argv[2]);
-	if (op == -1)
-		ft_putchar('0');
-	else if (listefonctions[op] == &division && val2 == 0)
-		ft_putstr("Stop : division by zero\n");
-	else if ((listefonctions[op] == &modulo && val2 == 0))
-		ft_putstr("Stop : modulo by zero\n");
-	else
-		ft_putnum(listefonctions[op](val1, val2));
+	ft_res(listefonctions, val1, val2, op);
 	return (0);
 }

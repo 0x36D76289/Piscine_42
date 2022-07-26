@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 00:12:24 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/26 16:28:55 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/26 20:14:29 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <sys/types.h>
-# include <sys/uio.h>
+# include <sys/stat.h>
+# include <fcntl.h>
 
 # define BUFF_SIZE 2048
 

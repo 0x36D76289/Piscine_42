@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 15:57:30 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/26 12:27:27 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/26 19:05:08 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	ft_any(char **tab, int (*f)(char*))
 	{
 		if (f(tab[i]) != 0)
 			return (1);
+		i++;
 	}
 	return (0);
 }

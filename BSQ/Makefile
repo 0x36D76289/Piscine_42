@@ -1,6 +1,6 @@
 NAME = bsq
 CC = gcc
-CFLAGS = -O3 -Werror -Wextra -Wall
+CFLAGS = -Werror -Wextra -Wall
 SRC = *.c
 
 all: ${NAME}
