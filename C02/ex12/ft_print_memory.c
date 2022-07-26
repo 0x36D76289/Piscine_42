@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 14:31:28 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/25 20:23:38 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/26 02:07:13 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,9 +101,4 @@ void	*ft_print_memory(void *addr, unsigned int size)
 		offset += 16;
 	}
 	return (addr);
-}
-int		main(void)
-{
-	char str[] = "Ceci est un test d'affichage de print memory!\nSegFault";
-	ft_print_memory(str, 54);
 }

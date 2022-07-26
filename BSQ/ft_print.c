@@ -1,38 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_combn.c                                   :+:      :+:    :+:   */
+/*   ft_print.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 17:41:06 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/26 02:07:58 by cfrancie         ###   ########.fr       */
+/*   Created: 2022/07/26 01:09:38 by cfrancie          #+#    #+#             */
+/*   Updated: 2022/07/26 01:09:51 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "main.h"
 
-void	ft_print_combn(int n)
+void	ft_putchar(char c)
 {
-	char	t[11];
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+}
+
+void	ft_putnbr(int nb)
+{
+	char	array[10];
 	int		i;
 
-	if (n < 1 || n > 9)
-		return ;
-	*t = '0';
 	i = 0;
-	while (++i < n)
-		t[i] = t[i - 1] + 1;
-	t[n] = ',';
-	t[n + 1] = ' ';
-	while (*t <= 58 - n)
+	if (nb < 0)
 	{
-		write(1, t, n + ((*t != 58 - n) ? 2 : 0));
-		i = n;
-		while (i--)
-			if (++t[i] <= 58 - n + i)
-				break ;
-		while (++i > 0 && i < n)
-			t[i] = t[i - 1] + 1;
+		ft_putchar('-');
+		nb = -nb;
+	}
+	if (nb == 0)
+		ft_putchar(48);
+	while (nb > 0)
+	{
+		array[i] = nb % 10;
+		i++;
+		nb /= 10;
+	}
+	while (i > 0)
+	{
+		i--;
+		ft_putchar(array[i] + 48);
 	}
 }
