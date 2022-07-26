@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 00:12:24 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/26 02:13:14 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/26 16:28:55 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ void	ft_putchar(char c);
 void	ft_putstr(char *str);
 void	ft_cat(void);
 void	ft_putnbr(int nb);
-int	 	ft_get_number_lines(char *argv);
+int		ft_get_number_lines(char *argv);
 char	ft_get_char_void(char *argv);
 char	ft_get_char_obst(char *argv);
 char	ft_get_char_full(char *argv);
-int	 	ft_get_number_columns(char *argv);
+int		ft_get_number_columns(char *argv);
 char	**ft_read_file(char *argv);
 void	ft_get_second_line(int fd);
 int	 	ft_strlen(char *str);

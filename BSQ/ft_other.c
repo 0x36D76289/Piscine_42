@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_if.c                                      :+:      :+:    :+:   */
+/*   ft_other.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 16:12:51 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/26 12:28:33 by cfrancie         ###   ########.fr       */
+/*   Created: 2022/07/26 16:24:29 by cfrancie          #+#    #+#             */
+/*   Updated: 2022/07/26 16:27:19 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_count_if(char **tab, int length, int (*f)(char*))
+#include "main.h"
+
+int		ft_strlen(char *str)
 {
-	int	i;
-	int	sum;
+	int i;
 
 	i = 0;
-	while (i < length)
+	while (*(str + i) != '\0')
 	{
-		if (f(tab) != 0)
-			sum++;
 		i++;
 	}
-	return (sum);
+	return (i);
+}
+
+char	*ft_strcpy(char *dest, char *src)
+{
+	int	i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = src[i];
+	return (dest);
 }

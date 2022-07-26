@@ -6,18 +6,18 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 16:17:03 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/23 16:19:57 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/26 12:28:44 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_sort(int *tab, int length, int(*f)(int, int))
+int	ft_is_sort(int *tab, int length, int (*f)(int, int))
 {
 	int	i;
 
 	i = 0;
 	while (i < length)
 	{
-		if ((*f)(tab[i], tab[i + 1]) > 0)
+		if (f(tab[i], tab[i + 1]) > 0)
 			return (0);
 		i++;
 	}

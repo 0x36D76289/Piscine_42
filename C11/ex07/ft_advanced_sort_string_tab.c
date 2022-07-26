@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 16:37:34 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/25 16:40:35 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/26 17:07:45 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_strlen(char **tab)
 	return (i);
 }
 
-void	ft_advanced_sort_string_tab(char **tab, int(*cmp)(char *, char *))
+void	ft_advanced_sort_string_tab(char **tab, int (*cmp)(char *, char *))
 {
 	int		i;
 	int		j;

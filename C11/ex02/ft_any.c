@@ -6,15 +6,18 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 15:57:30 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/23 16:15:18 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/26 12:27:27 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_any(char **tab, int(*f)(char*))
+int	ft_any(char **tab, int (*f)(char*))
 {
-	while (*tab++)
+	int	i;
+
+	i = 0;
+	while (tab[i])
 	{
-		if ((*f)(*tab) != 0)
+		if (f(tab[i]) != 0)
 			return (1);
 	}
 	return (0);

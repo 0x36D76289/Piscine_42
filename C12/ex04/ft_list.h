@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 19:38:33 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/25 19:48:46 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/26 15:54:39 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ typedef struct s_list
 	t_list	*next;
 }	t_list;
 
-int	ft_list_push_back(t_list *begin_list);
-t_list	*ft_create_elem(void *data);
+void	ft_list_push_back(t_list **begin_list, void *data);
 
 #endif
