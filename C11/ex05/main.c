@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 16:21:05 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/26 19:36:29 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/27 14:03:12 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_atoi(char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		ret = ret * 10 + (long)(*str - '0');
+		ret = ret * 10 + (long int)(*str - '0');
 		str++;
 	}
 	return ((int)(ret * sign));
@@ -61,7 +61,10 @@ int	ft_find_ope(char *arg)
 void	ft_res(int (*listefonctions[5])(int, int), int val1, int val2, int op)
 {
 	if (op == -1)
+	{
 		ft_putchar('0');
+		ft_putchar('\n');
+	}
 	else if (listefonctions[op] == &division && val2 == 0)
 		ft_putstr("Stop : division by zero\n");
 	else if ((listefonctions[op] == &modulo && val2 == 0))
@@ -73,7 +76,7 @@ void	ft_res(int (*listefonctions[5])(int, int), int val1, int val2, int op)
 	}
 }
 
-int	main(int argc, char *argv[])
+int	main(int argc, char **argv)
 {
 	int	(*listefonctions[5])(int, int);
 	int	op;

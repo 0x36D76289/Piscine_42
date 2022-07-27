@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_if.c                                      :+:      :+:    :+:   */
+/*   ft_list_push_strs.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 16:12:51 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/27 16:05:19 by cfrancie         ###   ########.fr       */
+/*   Created: 2022/07/27 14:27:05 by cfrancie          #+#    #+#             */
+/*   Updated: 2022/07/27 14:42:49 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_count_if(char **tab, int length, int (*f)(char*))
-{
-	int	i;
-	int	sum;
+#include "ft_list.h"
 
-	i = 0;
-	sum = 0;
-	while (i < length)
-	{
-		if (f(*tab) != 0)
-			sum++;
-		i++;
-	}
-	return (sum);
+t_list	*ft_list_push_strs(int size, char **strs)
+{
+	
 }

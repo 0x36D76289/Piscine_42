@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 16:30:11 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/25 16:36:40 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/27 13:55:59 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,22 @@ int	ft_strlen(char **tab)
 
 void	ft_sort_string_tab(char **tab)
 {
-	int		i;
-	int		j;
-	char	*tmp;
+	const int	size = ft_strlen(tab);
+	int			i;
+	int			j;
+	char		*tmp;
 
 	i = 0;
-	while (i < ft_strlen(tab))
+	while (i < size)
 	{
 		j = 0;
-		while (j < ft_strlen(tab))
+		while (j < size - 1)
 		{
-			if (ft_strcmp(tab[i], tab[j]) < 0)
+			if (ft_strcmp(tab[j], tab[j + 1]) > 0)
 			{
-				tmp = tab[i];
-				tab[i] = tab[j];
-				tab[j] = tmp;
+				tmp = tab[j];
+				tab[j] = tab[j + 1];
+				tab[j + 1] = tmp;
 			}
 			j++;
 		}

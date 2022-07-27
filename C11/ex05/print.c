@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 19:32:45 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/26 13:46:24 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/27 13:33:26 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_strcmp(char *str1, char *str2)
 
 void	ft_putnum(int num)
 {
-	long	tmp;
+	long int	tmp;
 
 	tmp = num;
 	if (tmp < 0)

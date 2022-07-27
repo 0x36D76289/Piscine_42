@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_if.c                                      :+:      :+:    :+:   */
+/*   ft_list.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 16:12:51 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/27 16:05:19 by cfrancie         ###   ########.fr       */
+/*   Created: 2022/07/27 14:26:58 by cfrancie          #+#    #+#             */
+/*   Updated: 2022/07/27 14:27:15 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_count_if(char **tab, int length, int (*f)(char*))
-{
-	int	i;
-	int	sum;
+#ifndef FT_LIST_H
+# define FT_LIST_H
 
-	i = 0;
-	sum = 0;
-	while (i < length)
-	{
-		if (f(*tab) != 0)
-			sum++;
-		i++;
-	}
-	return (sum);
-}
+# include <stdlib.h>
+
+typedef struct s_list
+{
+	void	*data;
+	t_list	*next;
+}	t_list;
+
+void	ft_list_push_back(t_list **begin_list, void *data);
+
+#endif
