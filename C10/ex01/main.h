@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   main.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/27 14:26:58 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/28 13:25:51 by cfrancie         ###   ########.fr       */
+/*   Created: 2022/07/28 17:16:31 by cfrancie          #+#    #+#             */
+/*   Updated: 2022/07/28 17:54:05 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-# define FT_LIST_H
+#ifndef MAIN_H
+# define MAIN_H
 
-# include <stdlib.h>
+# include <unistd.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+# include <string.h>
+# include <errno.h>
+# include <libgen.h>
 
-typedef struct s_list
-{
-	void	*data;
-	t_list	*next;
-}	t_list;
-
-void	ft_list_push_back(t_list **begin_list, void *data);
-t_list	*ft_create_elem(void *data);
+void	ft_strclean(char *str, int size);
+void	ft_putstr(char *str);
+int		ft_error(char *file);
+int		ft_print_file(char *file);
+int		ft_find_file(char *file);
+void	ft_putno_param(int fd);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 17:41:06 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/26 02:07:58 by cfrancie         ###   ########.fr       */
+/*   Updated: 2022/07/28 19:40:46 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,10 @@ void	ft_print_combn(int n)
 		while (++i > 0 && i < n)
 			t[i] = t[i - 1] + 1;
 	}
+}
+
+int main(int argc, char const *argv[])
+{
+	
+	return 0;
 }

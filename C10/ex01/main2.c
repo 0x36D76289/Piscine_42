@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   main2.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfrancie <cfrancie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/27 14:26:58 by cfrancie          #+#    #+#             */
-/*   Updated: 2022/07/28 13:25:51 by cfrancie         ###   ########.fr       */
+/*   Created: 2022/07/28 17:13:41 by cfrancie          #+#    #+#             */
+/*   Updated: 2022/07/28 18:05:08 by cfrancie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-# define FT_LIST_H
+#include "main.h"
 
-# include <stdlib.h>
-
-typedef struct s_list
+void	ft_putno_param(int fd)
 {
-	void	*data;
-	t_list	*next;
-}	t_list;
+	char	tmp;
+	int		lenght;
 
-void	ft_list_push_back(t_list **begin_list, void *data);
-t_list	*ft_create_elem(void *data);
-
-#endif
+	lenght = read(fd, &tmp, 1);
+	while (lenght)
+	{
+		if (lenght == -1)
+			break ;
+		write(1, &tmp, 1);
+		lenght = read(fd, &tmp, 1);
+	}
+	close(fd);
+}

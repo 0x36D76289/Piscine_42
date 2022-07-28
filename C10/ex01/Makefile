@@ -1,8 +1,9 @@
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
-SRC			= main.c
+SRC			= main.c main2.c
 OBJ			= ${SRC:.c=.o}
 TARGET		= ft_cat
+HEADERS		= main.h
 
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
